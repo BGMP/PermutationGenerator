@@ -54,7 +54,7 @@ def generate_combinations_itertools(elements: List[int], n: int, r: int) -> int:
     print(f"Execution time: {execution_time_microseconds} microseconds")
 
     # Log results to CSV
-    log_results_to_csv("python_itertools_results.csv", n, r, count, execution_time_microseconds)
+    log_results_to_csv("../python_itertools_results.csv", n, r, count, execution_time_microseconds)
 
     return count
 
@@ -84,7 +84,7 @@ def main():
     print("=====================================================")
 
     # Initialize CSV file with headers
-    initialize_csv_file("python_itertools_results.csv")
+    initialize_csv_file("../python_itertools_results.csv")
 
     print("\n=== RUNNING MULTIPLE COMBINATION EXAMPLES ===")
 
