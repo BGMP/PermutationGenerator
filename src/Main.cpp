@@ -64,7 +64,6 @@ int GenerateCombinations(int* elements, int n, int r) {
   std::cout << "\nTotal combinations found: " << count << std::endl;
   std::cout << "Execution time: " << duration.count() << " microseconds\n";
 
-  // Log results to CSV
   LogResultsToCSV("combination_results.csv", n, r, count, duration.count());
 
   delete[] combination;
@@ -160,7 +159,7 @@ void InitializeCSVFile(const char* filename) {
 }
 
 /**
- * Log results to CSV file in C-style
+ * Log results to CSV
  */
 void LogResultsToCSV(const char* filename, int n, int r, int combinations_count, long execution_time_microseconds) {
   FILE* file = fopen(filename, "a");
@@ -177,7 +176,6 @@ int main() {
   std::cout << "PERMUTATION GENERATOR PROJECT\n";
   std::cout << "============================\n";
 
-  // Initialize CSV file with headers
   InitializeCSVFile("combination_results.csv");
 
   std::cout << "\n=== RUNNING MULTIPLE COMBINATION EXAMPLES ===\n";
@@ -187,6 +185,7 @@ int main() {
   int elements1[] = {1, 2, 3, 4};
   GenerateCombinations(elements1, 4, 2);
 
+  /*
   // Test Case 2: 3 elements, combinations of size 2
   std::cout << "\n--- Test Case 2: C(3,2) ---";
   int elements2[] = {1, 2, 3};
@@ -255,6 +254,8 @@ int main() {
   GenerateCombinations(elements13, 18, 9);
 
   std::cout << "\n=== EXTREME PERFORMANCE TESTING COMPLETED ===\n";
+
+   */
 
   // Function 2
   std::cout << "\n=== RUNNING PERMUTATION EXAMPLE ===\n";
