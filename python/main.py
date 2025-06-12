@@ -79,76 +79,72 @@ def log_results_to_csv(filename: str, n: int, r: int, combinations_count: int, e
         print(f"Error: Could not open CSV file '{filename}' for writing.")
 
 def main():
-    """Main function with same test cases as C++ implementation"""
     print("PYTHON COMBINATION GENERATOR - ITERTOOLS IMPLEMENTATION")
-    print("=====================================================")
 
     # Initialize CSV file with headers
     initialize_csv_file("../python_itertools_results.csv")
 
-    print("\n=== RUNNING MULTIPLE COMBINATION EXAMPLES ===")
-
-    # Test Case 1: C(4,2) - Same as C++ original example
+    # Test Case 1: C(4,2)
     print("\n--- Test Case 1: C(4,2) ---")
     generate_combinations_itertools([1, 2, 3, 4], 4, 2)
 
     # Test Case 2: C(3,2)
-    print("\n--- Test Case 2: C(3,2) ---")
-    generate_combinations_itertools([1, 2, 3], 3, 2)
+    #print("\n--- Test Case 2: C(3,2) ---")
+    #generate_combinations_itertools([1, 2, 3], 3, 2)
 
     # Test Case 3: C(5,2)
-    print("\n--- Test Case 3: C(5,2) ---")
-    generate_combinations_itertools([1, 2, 3, 4, 5], 5, 2)
+    #print("\n--- Test Case 3: C(5,2) ---")
+    #generate_combinations_itertools([1, 2, 3, 4, 5], 5, 2)
 
     # Test Case 4: C(4,3)
-    print("\n--- Test Case 4: C(4,3) ---")
-    generate_combinations_itertools([1, 2, 3, 4], 4, 3)
+    #print("\n--- Test Case 4: C(4,3) ---")
+    #generate_combinations_itertools([1, 2, 3, 4], 4, 3)
 
     # Test Case 5: C(5,3)
-    print("\n--- Test Case 5: C(5,3) ---")
-    generate_combinations_itertools([1, 2, 3, 4, 5], 5, 3)
+    #print("\n--- Test Case 5: C(5,3) ---")
+    #generate_combinations_itertools([1, 2, 3, 4, 5], 5, 3)
 
     # Test Case 6: C(6,2)
-    print("\n--- Test Case 6: C(6,2) ---")
-    generate_combinations_itertools([1, 2, 3, 4, 5, 6], 6, 2)
+    #print("\n--- Test Case 6: C(6,2) ---")
+    #generate_combinations_itertools([1, 2, 3, 4, 5, 6], 6, 2)
 
     # Test Case 7: C(6,3)
-    print("\n--- Test Case 7: C(6,3) ---")
-    generate_combinations_itertools([1, 2, 3, 4, 5, 6], 6, 3)
+    #print("\n--- Test Case 7: C(6,3) ---")
+    #generate_combinations_itertools([1, 2, 3, 4, 5, 6], 6, 3)
 
     # Test Case 8: C(5,4)
-    print("\n--- Test Case 8: C(5,4) ---")
-    generate_combinations_itertools([1, 2, 3, 4, 5], 5, 4)
+    #print("\n--- Test Case 8: C(5,4) ---")
+    #generate_combinations_itertools([1, 2, 3, 4, 5], 5, 4)
 
     # Test Case 9: C(6,4)
-    print("\n--- Test Case 9: C(6,4) ---")
-    generate_combinations_itertools([1, 2, 3, 4, 5, 6], 6, 4)
+    #print("\n--- Test Case 9: C(6,4) ---")
+    #generate_combinations_itertools([1, 2, 3, 4, 5, 6], 6, 4)
 
-    print("\n=== BASIC COMBINATION TESTING COMPLETED ===")
+    #print("\n=== BASIC COMBINATION TESTING COMPLETED ===")
 
     # Extra Performance Tests - High Computational Load
-    print("\n=== RUNNING EXTRA PERFORMANCE TESTS ===")
-    print("WARNING: These tests may take significant time!")
+    #print("\n=== RUNNING EXTRA PERFORMANCE TESTS ===")
+    #print("WARNING: These tests may take significant time!")
 
     # Test Case 10: C(10,5) = 252 combinations
-    print("\n--- Extra Test Case 10: C(10,5) ---")
-    generate_combinations_itertools([1, 2, 3, 4, 5, 6, 7, 8, 9, 10], 10, 5)
+    #print("\n--- Extra Test Case 10: C(10,5) ---")
+    #generate_combinations_itertools([1, 2, 3, 4, 5, 6, 7, 8, 9, 10], 10, 5)
 
     # Test Case 11: C(12,6) = 924 combinations
-    print("\n--- Extra Test Case 11: C(12,6) ---")
-    generate_combinations_itertools([1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12], 12, 6)
+    #print("\n--- Extra Test Case 11: C(12,6) ---")
+    #generate_combinations_itertools([1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12], 12, 6)
 
     # Test Case 12: C(15,7) = 6.435 combinations
-    print("\n--- Extra Test Case 12: C(15,7) ---")
-    generate_combinations_itertools([1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15], 15, 7)
+    #print("\n--- Extra Test Case 12: C(15,7) ---")
+    #generate_combinations_itertools([1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15], 15, 7)
 
     # Test Case 13: C(18,9) = 48.620 combinations
-    print("\n--- Extra Test Case 13: C(18,9) ---")
-    generate_combinations_itertools([1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18], 18, 9)
+    #print("\n--- Extra Test Case 13: C(18,9) ---")
+    #generate_combinations_itertools([1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18], 18, 9)
 
-    print("\n=== EXTREME PERFORMANCE TESTING COMPLETED ===")
+    #print("\n=== EXTREME PERFORMANCE TESTING COMPLETED ===")
 
-    print("\n=== COMBINATION TESTING COMPLETED ===")
+    #print("\n=== COMBINATION TESTING COMPLETED ===")
     print("Results saved to: python_itertools_results.csv")
 
 if __name__ == "__main__":

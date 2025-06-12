@@ -44,8 +44,7 @@ void InitializeCSVFile(const char* filename);
  * Measures execution time and returns count of combinations
  */
 int GenerateCombinations(int* elements, int n, int r) {
-  std::cout << "\n=== FUNCTION 1: GENERATING COMBINATIONS ===\n";
-  std::cout << "Elements: ";
+  std::cout << "\nElements: ";
   PrintArray(elements, n);
   std::cout << "Generating combinations of size " << r << " from " << n << " elements\n\n";
 
@@ -89,7 +88,6 @@ void GenerateCombinationsRecursive(int* elements, int n, int* combination, int r
  * Uses a simple approach with adjacent swaps
  */
 int FindMinimumSteps(int* initial, int* target, int size) {
-  std::cout << "\n=== FUNCTION 2: FINDING MINIMUM STEPS ===\n";
   std::cout << "Initial sequence: ";
   PrintArray(initial, size);
   std::cout << "Target sequence:  ";
@@ -173,15 +171,9 @@ void LogResultsToCSV(const char* filename, int n, int r, int combinations_count,
 }
 
 int main() {
-  std::cout << "PERMUTATION GENERATOR PROJECT\n";
-  std::cout << "============================\n";
-
   InitializeCSVFile("combination_results.csv");
-
-  std::cout << "\n=== RUNNING MULTIPLE COMBINATION EXAMPLES ===\n";
-
   // Test Case 1: Original example - 4 elements, combinations of size 2
-  std::cout << "\n--- Test Case 1: C(4,2) ---";
+  std::cout << "\n--- Function 1: C(4,2) ---";
   int elements1[] = {1, 2, 3, 4};
   GenerateCombinations(elements1, 4, 2);
 
@@ -226,12 +218,7 @@ int main() {
   int elements9[] = {1, 2, 3, 4, 5, 6};
   GenerateCombinations(elements9, 6, 4);
 
-  std::cout << "\n=== COMBINATION TESTING COMPLETED ===\n";
   std::cout << "Results saved to: combination_results.csv\n";
-
-  // Extra Performance Tests - High Computational Load
-  std::cout << "\n=== RUNNING EXTRA PERFORMANCE TESTS ===\n";
-  std::cout << "WARNING: These tests may take significant time!\n";
 
   // Test Case 10: C(10,5) = 252 combinations
   std::cout << "\n--- Extra Test Case 10: C(10,5) ---";
@@ -252,20 +239,15 @@ int main() {
   std::cout << "\n--- Extra Test Case 13: C(18,9) ---";
   int elements13[] = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18};
   GenerateCombinations(elements13, 18, 9);
-
-  std::cout << "\n=== EXTREME PERFORMANCE TESTING COMPLETED ===\n";
-
    */
 
-  // Function 2
-  std::cout << "\n=== RUNNING PERMUTATION EXAMPLE ===\n";
-  int initial[] = {1, 2, 3, 4};
-  int target[] = {4, 3, 2, 1};
-  int size = 4;
+  std::cout << "\n--- Function 2 ---\n";
+
+  int initial[] = {1, 2, 3, 4, 5, 6};
+  int target[] = {6, 5, 4, 3, 2, 1};
+  int size = 6;
 
   FindMinimumSteps(initial, target, size);
-
-  std::cout << "\n=== PROGRAM COMPLETED ===\n";
 
   return 0;
 }
